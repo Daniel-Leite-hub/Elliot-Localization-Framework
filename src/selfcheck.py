@@ -148,7 +148,6 @@ def run():
             check('DeepL simulado: recusa isolada, checkpoint e 456',states==['recusada','concluida','erro'] and session.calls==3)
             check('DeepL simulado: resposta inválida fora do cache',queue_store.db.execute('SELECT count(*) FROM cache').fetchone()[0]==1)
             check('DeepL simulado: credencial não persistida','FAKE-KEY' not in ''.join(queue_store.db.iterdump()))
-            uncertain_entry=queue_store.rows()[-1]
             # O grupo com 456 permanece elegível; transporte sem resposta fica incerto.
             session2=FakeSession([requests.Timeout()])
             TranslationJob(queue_store,Provider('FAKE',session=session2),queue_store.estimate()['groups']).run()

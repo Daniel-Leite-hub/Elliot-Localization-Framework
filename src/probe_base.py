@@ -1,9 +1,11 @@
 """Sondagem da base: leitura somente, índice e validação de candidatos AES locais."""
 import hashlib, json, mmap, re, struct
 import sys
-sys.stdout.reconfigure(encoding='utf-8')
 from pathlib import Path
 from Crypto.Cipher import AES
+
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding='utf-8')
 
 ROOT=Path(__file__).resolve().parents[2]
 OUT=ROOT/'FerramentaTraducao'/'pesquisa'

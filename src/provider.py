@@ -104,7 +104,6 @@ class TranslationJob:
                 for member, _, member_key in self.store.prepared_pending():
                     if member_key in self.groups:
                         self.members.setdefault(member_key, []).append(member['id'])
-            consecutive_failures = 0
             self.session_total = sum(len(ids) for ids in self.members.values())
             self.emit_progress()
             for key, (representative, payload) in self.groups.items():
@@ -193,7 +192,6 @@ class TranslationJob:
                         self.emit_progress()
                         self.reason='Comunicação incerta; progresso salvo. Autorize deliberadamente qualquer repetição.'
                         return
-                    consecutive_failures = 0
                     status = response.status_code
                     if status != 200:
                         self.update_request(rid, 'erro', f'HTTP {status}', elapsed=elapsed)

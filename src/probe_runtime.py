@@ -25,7 +25,7 @@ def snapshot(pid,label):
         with out.open('wb') as stream:
             for offset in range(0,info.size,65536):
                 size=min(65536,info.size-offset);n.value=0
-                ok=k.ReadProcessMemory(handle,info.base+offset,buffer,size,C.byref(n))
+                k.ReadProcessMemory(handle,info.base+offset,buffer,size,C.byref(n))
                 data=buffer.raw[:n.value] if n.value else b'';total+=len(data)
                 stream.write(data+b'\0'*(size-len(data)))
         record=dict(pid=pid,base=info.base,size=info.size,readable=total,file=str(out),process_memory_modified=False)

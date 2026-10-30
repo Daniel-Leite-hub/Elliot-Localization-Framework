@@ -10,6 +10,14 @@ Deterministically verifies that translated strings preserve:
 import re
 import sys
 
+# Garante saída UTF-8 mesmo em consoles Windows com codepage legado (ex: cp1252 do GitHub Actions)
+if hasattr(sys.stdout, "reconfigure"):
+    try:
+        sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+        sys.stderr.reconfigure(encoding="utf-8", errors="replace")
+    except Exception:
+        pass
+
 PARAM_REGEX = re.compile(r"(\{\d+\}|%[0-9]*\$?[a-zA-Z%]|%[0-9]*\$?\*?[0-9]*\.?\*?[0-9]*[a-zA-Z]+)")
 TAG_REGEX = re.compile(r"(<[^>]+>)")
 ESCAPE_REGEX = re.compile(r"(\\[nrt]|\r\n|\n|\r)")
