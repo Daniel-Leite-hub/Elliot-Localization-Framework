@@ -1,0 +1,53 @@
+{
+  "project": "The Adventures of Elliot: The Millennium Tales",
+  "glossary_structure": "Two-Tier Architecture (Global Canonical + Scene Spotlight)",
+  "global_canonical_terms": [
+    {
+      "term_id": "GLOSS_MAGICITE",
+      "canonical_ptbr": "Magicita",
+      "japanese": "魔石",
+      "english_source": "Magicite",
+      "spanish_ref": "Magicitas",
+      "category": "Lore / Core Mechanics",
+      "rules": "Substantivo feminino. Cristais arcanos de aprimoramento de armas e habilidades."
+    },
+    {
+      "term_id": "GLOSS_PERFECT_GUARD",
+      "canonical_ptbr": "Bloqueio Perfeito",
+      "japanese": "ジャストガード",
+      "english_source": "Perfect Guard",
+      "spanish_ref": "Guardia perfecta",
+      "category": "Combat Mechanics",
+      "rules": "Não traduzir como 'Aparada Justa' ou 'Defesa Exata'."
+    },
+    {
+      "term_id": "GLOSS_MEW_MEW",
+      "canonical_ptbr": "Mew Mew",
+      "japanese": "ミューミュー",
+      "english_source": "Mew Mew",
+      "spanish_ref": "Mew Mew",
+      "category": "Characters / Vendors",
+      "rules": "Vendedor felino lendário. Voz infantilizada com onomatopeias felinas."
+    },
+    {
+      "term_id": "GLOSS_CAT_LOVER_TRAV",
+      "canonical_ptbr": "Viajante Amante de Gatos",
+      "japanese": "ネコ好きの旅人",
+      "english_source": "Cat-Loving Traveler",
+      "spanish_ref": "Viajero amante de los gatos",
+      "category": "NPCs",
+      "rules": "Resgatado diretamente da autoridade japonesa para evitar inconsistência de gênero."
+    }
+  ],
+  "scene_spotlight_sample": {
+    "scene_id": "M04_Underground_Ruins",
+    "exclusive_terms": [
+      {
+        "term": "Núcleo de Chronos",
+        "japanese": "クロノスの核",
+        "scope": "Ruínas Subterrâneas de Eldoria",
+        "notes": "Artefato temporal chave da missão principal 4."
+      }
+    ]
+  }
+}

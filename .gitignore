@@ -1,0 +1,91 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyd
+
+# C-extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec.bak
+applicator_gui/bin/
+applicator_gui/payload/
+*.exe
+
+# Large Database files (>50MB) and Game Binaries
+# Demo SQLite databases under 10MB are permitted for testing
+*.sqlite-wal
+*.sqlite-shm
+*.sqlite.lock
+backups/
+TraducaoBackups/
+Elliot.sqlite
+Elliot-FINAL-homologado-100%.sqlite
+
+# Unreal Engine Assets and Container Binaries
+*.pak
+*.uasset
+*.uexp
+*.ubulk
+*.rar
+*.zip
+*.7z
+
+# Unit test / coverage
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# IDE & OS Files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Logs & Diagnostics
+*.log
+*.tmp

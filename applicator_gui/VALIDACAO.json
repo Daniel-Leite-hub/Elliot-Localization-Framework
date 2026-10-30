@@ -1,0 +1,29 @@
+{
+  "installed": true,
+  "backup": "F:\\The Adventures of Elliot_The Millennium Tales\\TraducaoBackups\\reinsercao-1791581628674265900\\original.pak",
+  "index_hashes_verified": true,
+  "spanish_resource_matches_ptbr": true,
+  "original_backup_verified": true,
+  "old_overlay_removed": true,
+  "runtime_validated": true,
+  "scope": "Reinserção no PAK real verificada por extração; aparência no jogo depende do teste do usuário.",
+  "exe_verification": {
+    "verified": true,
+    "mode": "reinsercao-v2",
+    "target": "F:\\The Adventures of Elliot_The Millennium Tales\\Elliot\\Content\\Paks\\Elliot-Windows.pak",
+    "installed": true,
+    "game_validated": false
+  },
+  "tests_passed": [
+    "backup original preservado",
+    "instalação",
+    "reinstalação idempotente",
+    "restauração",
+    "payload corrompido recusado",
+    "base divergente recusada"
+  ],
+  "runtime_status": "confirmado pelo usuário: português no menu ao selecionar Espanhol",
+  "runtime_validation_scope": "menu e carregamento da localização, por relato do usuário",
+  "runtime_full_game_validated": false,
+  "font_and_dialogue_layout_validated": false
+}

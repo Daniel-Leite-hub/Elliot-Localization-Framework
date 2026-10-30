@@ -1,0 +1,15 @@
+{
+  "format": "elliot-reinsertion-v2",
+  "game_validated": false,
+  "target": "Elliot/Content/Paks/Elliot-Windows.pak",
+  "base_sha256": "ecb89d2f5e7a3340baa1bc9bc6cfb79347dd4210f8b53cfb2572be38a8b55b47",
+  "base_size": 3683149111,
+  "output_sha256": "835be65961f7ae1efb265fed9b84adf5a581bd04e008d5be81f979a69026609b",
+  "output_size": 3687929602,
+  "payload": "payload/reinsercao.bin",
+  "payload_sha256": "9eeffbb4330f3b69b385b05dc7d950504676f1895085cfd197ad71b457efa1ed",
+  "old_overlay_sha256": "1210fe485a19503d439f0a53de4451235f79a5ea90c835801e6e23c1dfe2732b",
+  "entries": 16914,
+  "index_hashes_verified": true,
+  "only_changed_archive_entry": "../../../Elliot/Content/Localization/Game/es/Game.locres"
+}

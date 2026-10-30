@@ -1,0 +1,35 @@
+[
+  {
+    "id": "e5_b01_prop_01",
+    "resource": "Elliot/Content/Data/MessageText/ST_TutorialText.uasset",
+    "key": "TUT_PARRY_EXPLAIN",
+    "japanese_authority": "敵の攻撃を受ける直前にガードを入力すると、ジャストガードが成功します。",
+    "english_source": "Input guard right before receiving an enemy attack to succeed in a perfect guard.",
+    "draft_anterior": "Insira guarda antes de receber ataque inimigo para ter sucesso na guarda perfeita.",
+    "approved": "Pressione a guarda no instante exato do golpe inimigo para executar um Bloqueio Perfeito.",
+    "justificativa": "Substituição de literalismo mecânico e calque sintático em prol de naturalidade em UI de ação, alinhando com a terminologia oficial 'Bloqueio Perfeito' e oralidade intuitiva.",
+    "criterios": ["CRIT_01", "CRIT_05", "CRIT_06", "CRIT_08"]
+  },
+  {
+    "id": "e4_b03_prop_07",
+    "resource": "Elliot/Content/Data/MessageText/ST_SupMsgText.uasset",
+    "key": "SUP_FAIE_BOSS_DANGER",
+    "japanese_authority": "エリオット……危ないっ！大技が来るよ……！",
+    "english_source": "Elliot... Watch out! A big move is coming...!",
+    "draft_anterior": "Elliot... Cuidado! Um grande movimento está vindo...!",
+    "approved": "Elliot…… Cuidado! Ele vai usar o ataque supremo……!",
+    "justificativa": "Resgate da autoridade dramática de Faie (pontuação canônica …… com urgência em combate) e eliminação do calque 'grande movimento' (big move) substituído por 'ataque supremo'.",
+    "criterios": ["CRIT_01", "CRIT_02", "CRIT_03", "CRIT_08"]
+  },
+  {
+    "id": "e5_b04_prop_12",
+    "resource": "Elliot/Content/Data/MessageText/ST_SystemText.uasset",
+    "key": "SYS_CAT_PLAY_ACTION",
+    "japanese_authority": "ネコとあそぶ",
+    "english_source": "Play with cat",
+    "draft_anterior": "Reproduzir com o gato",
+    "approved": "Brincar com o gato",
+    "justificativa": "Correção crítica de falso cognato grave de tradução automática ('Play' traduzido erroneamente como reprodução de mídia em vez de brincar com o animal).",
+    "criterios": ["CRIT_01", "CRIT_08"]
+  }
+]
