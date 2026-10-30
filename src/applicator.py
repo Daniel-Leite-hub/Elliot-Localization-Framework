@@ -10,6 +10,17 @@ from tkinter import ttk, filedialog, messagebox
 from core import VERSION, atomic_write, file_hash
 
 
+def is_junction(path):
+    try:
+        return path.is_junction()
+    except AttributeError:
+        try:
+            import stat
+            return bool(path.lstat().st_file_attributes & getattr(stat, 'FILE_ATTRIBUTE_REPARSE_POINT', 0x400))
+        except Exception:
+            return False
+
+
 def inside(root, relative):
     root=Path(root).resolve()
     win=PureWindowsPath(relative)
@@ -20,7 +31,7 @@ def inside(root, relative):
         raise ValueError('Destino fora da pasta selecionada.')
     cursor=target
     while cursor!=root:
-        if cursor.exists() and (cursor.is_symlink() or cursor.is_junction()):
+        if cursor.exists() and (cursor.is_symlink() or is_junction(cursor)):
             raise ValueError('Links/reparse points não são aceitos.')
         cursor=cursor.parent
     return target

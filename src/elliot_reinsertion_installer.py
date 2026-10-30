@@ -2,7 +2,7 @@
 import json,os,shutil,sys,time,uuid
 from pathlib import Path
 from core import atomic_write,file_hash
-from applicator import inside
+from applicator import inside, is_junction
 from elliot_overlay_installer import running
 
 HOME=Path(sys.executable).resolve().parent if getattr(sys,'frozen',False) else Path(__file__).resolve().parents[1]/'AplicadorPTBR-v2'
@@ -32,7 +32,7 @@ def action(root,mode,home=HOME,check_running=True):
   if h==m['base_sha256']:return 'O PAK original já está restaurado.'
   backups=inside(root,'TraducaoBackups');candidates=[]
   for j in backups.glob('reinsercao-*/operacao.json'):
-   if j.is_symlink() or j.parent.is_symlink() or j.parent.is_junction():continue
+   if j.is_symlink() or j.parent.is_symlink() or is_junction(j.parent):continue
    obj=json.loads(j.read_text(encoding='utf-8'));b=inside(j.parent,'original.pak')
    if obj.get('format')=='elliot-reinsertion-operation-v2' and obj.get('base_sha256')==m['base_sha256'] and b.is_file():candidates.append((j,b,obj))
   if not candidates:raise ValueError('Backup original não localizado. Nenhum arquivo alterado.')

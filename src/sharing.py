@@ -3,6 +3,7 @@ import collections,hashlib,json,os,shutil,struct,time,zipfile
 from pathlib import Path
 from Crypto.Cipher import AES
 from core import atomic_write,file_hash,validate
+from applicator import is_junction
 from deep_search import Pak,Reader
 from locres import LocRes
 
@@ -62,7 +63,7 @@ def original_pak(project,expected,notify,cancel):
     candidates.extend(sorted((root/'TraducaoBackups').glob('reinsercao-*/original.pak'),reverse=True))
     for p in candidates:
         check_cancel(cancel)
-        if not p.is_file() or p.is_symlink() or p.parent.is_symlink() or p.parent.is_junction():continue
+        if not p.is_file() or p.is_symlink() or p.parent.is_symlink() or is_junction(p.parent):continue
         notify('Conferindo a base original para compartilhamento…')
         if file_hash(p)==expected:return p
     raise ValueError('PAK original compatível não localizado. Preserve o backup original em TraducaoBackups.')
